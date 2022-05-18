@@ -1,0 +1,56 @@
+/** Fonts **/
+
+@font-face {
+    font-family: minecraftEvenings;
+    src: url(../data/fonts/minecraft-evenings.regular.otf);
+}
+
+/** Main **/
+
+body {
+    background: #2C2F2D;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#scene {
+    width: 110%;
+    height: 110vh;
+    left: -5%;
+    top: -5vh;
+    transform-style: preserve-3d; 
+    backface-visibility: hidden;
+}
+
+.layer {
+    position: absolute; 
+    display: block; 
+    transform-style: preserve-3d; 
+    backface-visibility: hidden;
+    width: 100%;
+    height: 110vh;
+}
+
+.background {
+    background: url(../data/images/front/background.png) no-repeat 50% 100%;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+}
+
+.title {
+    color: white;
+    position: absolute;
+    font-family: minecraftEvenings;
+    text-shadow: 0 8px 6px rgba(150, 150, 150, 0.4);
+    margin-top: -0.7em;
+    position: absolute;
+    width: 100%;
+    top: 42%;
+}

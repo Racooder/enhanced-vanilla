@@ -2,77 +2,53 @@
 
 <html>
     <head>
-        <title>Minecraft Refabricated</title>
+        <title>Racoonia Minecraft</title>
 
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/minecraft-refabricated.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="document.body.style.opacity='1'">
         <header>
-            <a href="index.html">Home</a>
-            <a href="minecraft-refabricated.html" class="active">Minecraft Refabricated</a>
-            <a href="gallery.html">Gallerie</a>
+            <nav class="flex">
+                <ul class="left">
+                    <li class="active"><a href="minecraft-refabricated.html">Minecraft Refabricated</a></li>
+                    <li><a href="modpack-installation.html">Modpack Installation</a></li>
+                    <li><a href="gallery.html">Gallerie</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="https://discord.gg/EkHPVBdCzd" rel="noopener noreferrer">Discord <img class="link"/></a></li>
+                    <li><a href="https://github.com/Racooder/racoonia-minecraft/issues" rel="noopener noreferrer">Issues <img class="link"/></a></li>
+                </ul>
+            </nav>
         </header>
 
+        <nav class="contents">
+            <h3>Zusätzliche Informationen</h3>
+            <ul>
+                <li><a href="modpack-installation.html">Modpack Installation</a></li>
+                <li><a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Racoonia Minecraft Wiki <img class="link"/></a></li>
+            </ul>
+        </nav>
+
         <article id="title">
-            <div class="contents">
-                <h3>Contents</h3>
-                <ul>
-                    <li><a href="#download">Modpack Herunterladen</a></li>
-                    <li><a href="#installation">Modpack Installation</a></li>
-                    <li><a href="#getting-startet">Getting Startet</a></li>
-                </ul>
+            <h1>Minecraft Refabricated</h1>
+            <div class="gallery">
+                <img loading="lazy" class="gallery" src="data/images/gallery/refabricated/pink-forest-mountain.png">
+                <span></span>
             </div>
         </article>
-        
-        <article id="installation">
-            <h1>Installation</h1>
 
-            <section id="download" class="no_margin">
-                <h2>Modpack Herunterladen</h2>
-                <p>Lade dir die neuste Version des Modpacks <a href="https://t1p.de/mc-refabricated-mods" target="_blank" rel="noopener noreferrer">hier</a> herunter.</p>
-                <img loading="lazy" src="images/current-project/download-modpack.png">
-                <br>
-                <h2>Launcher Installieren</h2>
-                <p>Der CurseForge Launcher hilft einfach Modpacks zu Installieren, zu spielen oder sogar selber zu erstellen.</p>
-                <p>Lade ihn hierfür unter <a href="https://download.curseforge.com" target="_blank" rel="noopener noreferrer">https://download.curseforge.com</a> herunter</p>
-                <img loading="lazy" class="guide" src="images/current-project/download-curseforge.png">
-                <p>Öffne nun zur Installation das heruntergeladene Programm. Solltest du gefragt werden ob das Programm Änderungen an deinem Computer vornehmen darf, stimme zu.</p>
-                <p>Folge nun den Anweisungen des Installationsprogrammes.</p>
-                <br>
-                <p>Wird dir dies angezeigt ist der CurseForge auf deinem Computer installiert. Klicke nun auf "Starten" um mit der Einrichtung fortzufahren.</p>
-                <img loading="lazy" class="guide" src="images/current-project/installation-complete.png">
-                <p>Begrüßt dich der Launcher kannst du das Intro getrost überspringen oder es dir durchlesen.</p>
-                <img loading="lazy" class="guide" src="images/current-project/welcome-to-curseforge.png">
-                <p>Nun wirst du aufgefordert ein Spiel auszusuchen. Wähle hier Minecraft aus.</p>
-                <img loading="lazy" class="guide" src="images/current-project/choose-a-game.png">
-                <p>Jetzt musst du nur noch einen Modding Ordner auswählen und schon kann es mit dem Importiern des Modpacks losgehen.</p>
-                <img loading="lazy" class="guide" src="images/current-project/choose-location.png">
-            </section>
-
-            <section id="import">
-                <h2>Modpacks Importieren</h2>
-                <p>Nachdem du den CurseForge Launcher erfolgreich installiert hast kannst du mit dem Importieren des Modpacks loslegen.</p>
-                <p>Erstelle nun ein benutzerdefiniertes Profil mit dem Button oben rechts in der Ecke.</p>
-                <img loading="lazy" class="guide" src="images/current-project/create-profile.png">
-                <p>Clicke im geöffneten Menü nun oben links auf "importieren".</p>
-                <img loading="lazy" class="guide" src="images/current-project/import-modpack.png">
-                <p>Wähle die am Anfang heruntergeladene Archiv Datei aus und klicke auf öffnen.</p>
-                <img loading="lazy" class="guide" src="images/current-project/open-file.png">
-                <p>Sobald der Import abgeschlossen ist kannst du das Modpack öffnen und auf "Spielen" klicken.</p>
-                <img loading="lazy" class="guide" src="images/current-project/play-modpack.png">
-                <p>Nach dem du dich nun eventuell noch mit deinem Minecraft Konto anmelden musst, ist das Modpack spielbereit.</p>
-                <img loading="lazy" class="guide" src="images/current-project/minecraft-launcher.png">
-            </section>
-
-            <section id="getting-startet">
-                <h2>Getting Startet</h2>
-            </section>
+        <article id="wiki">
+            <h2>Wiki</h2>
+            <p>Im <a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Racoonia Minecraft Wiki</a> sind Informationen zu vielen der Mods sowie eine komplette Modliste zu finden.</p>
+            <p2>Das <a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Wiki</a> ist ein Gemeinschaftsprojekt. Ergänzungen sind herzlich willkommen</p2>
+            <div style="display: block; padding-bottom: 30px;"></div>
         </article>
     </body>
 </html>

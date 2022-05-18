@@ -2,30 +2,28 @@
 
 <html>
     <head>
-        <title>Racoonia</title>
+        <title>Racoonia Minecraft</title>
 
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/index.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="parallax.js"></script>
     </head>
 
-    <body class="index" onclick="window.location.href='./minecraft-refabricated.html'">
-        <header>
-            <a href="index.html" class="active">Home</a>
-            <div class="vertical-line"/>
-            <a href="minecraft-refabricated.html">Minecraft Refabricated</a>
-            <div class="vertical-line"/>
-            <a href="gallery.html">Gallerie</a>
-        </header>
-
-        <article id="minecraft-current">
-            <div class="minecraft-font">
-                <h1 class="black">Racoonia presents</h1>
-                <h2 class="black">Minecraft Refabricated</h2>
-            </div>
-        </article>
+    <body onclick="window.location.href='./minecraft-refabricated.html'" onload="document.body.style.opacity='1'; parallax()">
+        <ul id="scene" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+            <li class="layer" data-depth="0.05">
+                <div class="background"></div>
+            </li>
+            <li class="layer" data-depth="0.15">
+                <h1 class="title" id="first">Minecraft Refabricated</h1>
+            </li>
+        </ul>
     </body>
 </html>

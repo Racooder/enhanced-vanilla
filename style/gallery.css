@@ -1,0 +1,17 @@
+div.gallery span {
+  margin-bottom: 15px;
+  display: block;
+}
+
+img.view-limit {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+img#pixelated {
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+}
