@@ -11,19 +11,27 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="script.js"></script>
     </head>
 
-    <body onload="document.body.style.opacity='1'">
-        <header>
+    <body onload="onLoad()">
+        <ul class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+            <li class="layer" data-depth="0.05">
+                <div class="background"></div>
+            </li>
+        </ul>
+        
+        <header class="header">
             <nav class="flex">
                 <ul class="left">
-                    <li><a href="minecraft-refabricated.html">Minecraft Refabricated</a></li>
+                    <li id="left-radius"><a href="minecraft-refabricated.html">Minecraft Refabricated</a></li>
                     <li><a href="modpack-installation.html">Modpack Installation</a></li>
-                    <li class="active"><a href="gallery.html">Gallerie</a></li>
+                    <li class="active" id="right-radius"><a href="gallery.html">Gallerie</a></li>
                 </ul>
-                <ul class="right">
-                    <li><a href="https://discord.gg/EkHPVBdCzd" rel="noopener noreferrer">Discord <img class="link"/></a></li>
-                    <li><a href="https://github.com/Racooder/racoonia-minecraft/issues" rel="noopener noreferrer">Issues <img class="link"/></a></li>
+                <ul class="right-header">
+                    <li><button class="theme-switch" onclick="setTheme()"></button></li>
                 </ul>
             </nav>
         </header>
@@ -40,75 +48,82 @@
         <article id="images">
             <section id="refabricated">
                 <h2>Minecraft Refabricated</h2>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/refabricated/pink-forest-mountain.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/refabricated/amethyst-jungle.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/refabricated/dry-land.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/refabricated/forest-purple-grass.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/refabricated/ice-cave-vulcano.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/refabricated/mountain-night.png">
                 </div>
             </section>
 
             <section id="1-18-vanilla">
                 <h2>1.18 Vanilla Projekt</h2>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/spawn.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/simon-passage.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/end-portal.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/gotura-base.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/reg-base.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/simon-base.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/jonmoja-base.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/noah-base.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/oakenshield-gate.png">
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" src="data/images/gallery/1-18-vanilla/sky-base.png">
                 </div>
             </section>
 
             <section id="gotura-art">
                 <h2>Art by Gotura</h2>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" class="view-limit" src="data/images/gallery/gotura-art/racoonia-banner.png">
                     <span>Racoonia Banner</span>
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img loading="lazy" class="view-limit" src="data/images/gallery/gotura-art/bot-logo.jpg">
                     <span>Racoonia Guardian Bot Logo</span>
                 </div>
-                <div class="gallery">
+                <div class="gallery-img">
                     <img id="pixelated" loading="lazy" class="view-limit" src="data/images/gallery/gotura-art/create-sea.jpg">
                     <span>Create Sea Logo</span>
                 </div>
             </section>
         </article>
+
+        <div class="attribution">
+            <p>Icons by <a href="https://www.flaticon.com/authors/freepik" rel="noopener noreferrer">Freepik <img class="img-link" id="standard-img-link"/></a> and <a href="https://www.flaticon.com/authors/adriansyah" rel="noopener noreferrer">adriansyah <img class="img-link" id="standard-img-link"/></a></p>
+        </div>
+
+        <div class="cursor"></div>
+        <div class="cursor-spot"></div>
     </body>
 </html>

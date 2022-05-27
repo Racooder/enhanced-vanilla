@@ -6,24 +6,31 @@
 
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/minecraft-refabricated.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="script.js"></script>
     </head>
 
-    <body onload="document.body.style.opacity='1'">
-        <header>
+    <body onload="onLoad()">
+        <ul class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+            <li class="layer" data-depth="0.05">
+                <div class="background"></div>
+            </li>
+        </ul>
+        
+        <header class="header">
             <nav class="flex">
                 <ul class="left">
-                    <li class="active"><a href="minecraft-refabricated.html">Minecraft Refabricated</a></li>
+                    <li class="active" id="left-radius"><a href="minecraft-refabricated.html">Minecraft Refabricated</a></li>
                     <li><a href="modpack-installation.html">Modpack Installation</a></li>
-                    <li><a href="gallery.html">Gallerie</a></li>
+                    <li id="right-radius"><a href="gallery.html">Gallerie</a></li>
                 </ul>
-                <ul class="right">
-                    <li><a href="https://discord.gg/EkHPVBdCzd" rel="noopener noreferrer">Discord <img class="link"/></a></li>
-                    <li><a href="https://github.com/Racooder/racoonia-minecraft/issues" rel="noopener noreferrer">Issues <img class="link"/></a></li>
+                <ul class="right-header">
+                    <li><button class="theme-switch" onclick="setTheme()"></button></li>
                 </ul>
             </nav>
         </header>
@@ -32,23 +39,30 @@
             <h3>Zusätzliche Informationen</h3>
             <ul>
                 <li><a href="modpack-installation.html">Modpack Installation</a></li>
-                <li><a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Racoonia Minecraft Wiki <img class="link"/></a></li>
+                <li><a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Racoonia Minecraft Wiki <img class="img-link" id="standard-img-link"/></a></li>
             </ul>
         </nav>
 
         <article id="title">
             <h1>Minecraft Refabricated</h1>
             <div class="gallery">
-                <img loading="lazy" class="gallery" src="data/images/gallery/refabricated/pink-forest-mountain.png">
+                <img loading="lazy" class="gallery" src="data/images/gallery/refabricated/ice-cave-vulcano.png">
                 <span></span>
             </div>
         </article>
 
         <article id="wiki">
             <h2>Wiki</h2>
-            <p>Im <a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Racoonia Minecraft Wiki</a> sind Informationen zu vielen der Mods sowie eine komplette Modliste zu finden.</p>
-            <p2>Das <a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Wiki</a> ist ein Gemeinschaftsprojekt. Ergänzungen sind herzlich willkommen</p2>
+            <p>Im <a href="https://github.com/Racooder/racoonia-minecraft/wiki/minecraft-refabricated" rel="noopener noreferrer">Racoonia Minecraft Wiki <img class="img-link" id="standard-img-link"/></a> sind Informationen zu vielen der Mods sowie eine komplette Modliste zu finden.</p>
+            <p>Das Wiki ist ein Gemeinschaftsprojekt. Ergänzungen sind herzlich willkommen</p>
             <div style="display: block; padding-bottom: 30px;"></div>
         </article>
+
+        <div class="attribution">
+            <p>Icons by <a href="https://www.flaticon.com/authors/freepik" rel="noopener noreferrer">Freepik <img class="img-link" id="standard-img-link"/></a> and <a href="https://www.flaticon.com/authors/adriansyah" rel="noopener noreferrer">adriansyah <img class="img-link" id="standard-img-link"/></a></p>
+        </div>
+        
+        <div class="cursor"></div>
+        <div class="cursor-spot"></div>
     </body>
 </html>

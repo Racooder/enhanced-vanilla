@@ -13,17 +13,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-        <script src="parallax.js"></script>
+        <script src="script.js"></script>
     </head>
 
-    <body onclick="window.location.href='./minecraft-refabricated.html'" onload="document.body.style.opacity='1'; parallax()">
-        <ul id="scene" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+    <body onclick="window.location.href='./minecraft-refabricated.html'" onload="onLoad()">
+        <ul class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
             <li class="layer" data-depth="0.05">
-                <div class="background"></div>
+                <div class="background" id="index"></div>
             </li>
             <li class="layer" data-depth="0.15">
                 <h1 class="title" id="first">Minecraft Refabricated</h1>
             </li>
+            <li class="layer" data-depth="0.3">
+                <div class="attribution">
+                    <p>Icons by <a>Freepik</a> and <a>adriansyah</a></p>
+                </div>
+            </li>
         </ul>
+
+        <div class="cursor"></div>
+        <div class="cursor-spot"></div>
     </body>
 </html>
