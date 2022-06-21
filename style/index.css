@@ -10,6 +10,7 @@ body {
   background-size: cover;
   overflow-y: hidden;
   overflow-x: hidden;
+  cursor: none;
 }
 
 .title {
