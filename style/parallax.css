@@ -5,7 +5,6 @@ html {
 .scene {
   height: 100vh;
   width: 100%;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -15,7 +14,6 @@ html {
 .layer {
   position: fixed;
   display: block;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

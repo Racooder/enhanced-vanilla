@@ -101,11 +101,7 @@ button {
 .dark-mode {
     color: white;
 
-    #standard-img-link {
-        filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
-    }
-
-    #header-img-link {
+    .img-link {
         filter: invert(100%);
     }
 
