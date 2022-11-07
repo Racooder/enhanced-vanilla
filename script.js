@@ -4,7 +4,6 @@ function onLoad()
 {
     document.body.style.opacity='1';
     parallax();
-    betterCursor();
     setTheme(false);
 }
 
@@ -16,15 +15,6 @@ function parallax()
     {
         var parallaxInstance = new Parallax(scene);
     }
-}
-
-function betterCursor(){
-    const cursor = document.querySelector('.cursor');
-    const cursorSpot = document.querySelector('.cursor-spot');
-    
-    document.addEventListener('mousemove', e => {
-        cursor.style.cssText = cursorSpot.style.cssText = `top: ${e.clientY}px; left: ${e.clientX}px;`;
-    });
 }
 
 function setTheme(doSwitch = true)

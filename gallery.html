@@ -14,9 +14,10 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
         <script src="script.js"></script>
+        <script src="gallery.js"></script>
     </head>
 
-    <body onload="onLoad()">
+    <body onload="onLoad(); loadGalleries()">
         <ul class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
             <li class="layer" data-depth="0.05">
                 <div class="background"></div>
@@ -47,7 +48,11 @@
         </nav>
 
         <article id="images">
-            <section id="wild-update">
+            <div class="gallery" id="wild-update"></div>
+            <div class="gallery" id="refabricated"></div>
+            <div class="gallery" id="1-18-vanilla"></div>
+            <div class="gallery" id="gotura-art"></div>
+            <!-- <section id="wild-update">
                 <h2>The Wild Update</h2>
                 <div class="gallery-img">
                     <img loading="lazy" alt="jukebox with allay" src="https://user-images.githubusercontent.com/76227605/185678108-1cba86a2-756b-4a00-acc3-fbf536175bc7.png">
@@ -59,8 +64,33 @@
                     <img loading="lazy" alt="wild update wallpaper" src="https://user-images.githubusercontent.com/76227605/185397671-4ffce4e0-aaf4-4c93-a9f9-377ec84e2099.png">
                 </div>
             </section>
+
             <section id="refabricated">
                 <h2>Minecraft Refabricated</h2>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="stupid lense by gotura" src="https://user-images.githubusercontent.com/76227605/185685589-83c49b4a-ddda-45b7-9b76-c7539b36b211.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="titanic by jopingguin" src="https://user-images.githubusercontent.com/76227605/185685597-408f3f6f-74ca-44a5-8260-9cf6d4e1bad7.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="sunken portal by jopingguin" src="https://user-images.githubusercontent.com/76227605/185685606-ac3f2e4f-5a84-4e3c-af24-e6af39933f77.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="flying island by jopingguin" src="https://user-images.githubusercontent.com/76227605/185685618-1b791ebe-53fb-480d-b753-c7282c79e4bb.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="mushroom mineshaft by jopingguin" src="https://user-images.githubusercontent.com/76227605/185685636-e7915554-ac17-4222-a8e7-20e3a7fe4aeb.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="storage room by jopingguin" src="https://user-images.githubusercontent.com/76227605/185685654-319d0d20-0972-4548-b4b2-8862b9902057.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="bridge by gotura" src="https://user-images.githubusercontent.com/76227605/185685548-6e56311c-1e3b-4fe1-9506-4b62afaa996d.png">
+                </div>
+                <div class="gallery-img">
+                    <img loading="lazy" alt="foggy valley with pink forest" src="https://user-images.githubusercontent.com/76227605/185685514-34473a86-ecd2-439f-a212-2edffe763fd7.png">
+                </div>
                 <div class="gallery-img">
                     <img loading="lazy" alt="mountain with pink forest" src="https://user-images.githubusercontent.com/76227605/174876626-42740eef-85c6-4130-a19d-20b9324b6a89.png">
                 </div>
@@ -80,25 +110,7 @@
                     <img loading="lazy" alt="mountain at nighttime" src="https://user-images.githubusercontent.com/76227605/174876620-0f172bef-7b64-4aa5-aa46-f643b7ee295c.png">
                 </div>
                 <div class="gallery-img">
-                    <img loading="lazy" alt="ender dragon island" src="https://user-images.githubusercontent.com/76227605/174879142-9c583f22-737e-4355-b31b-c8a4b3780fe8.png">
-                </div>
-                <div class="gallery-img">
-                    <img loading="lazy" alt="canyon with pink forest" src="https://user-images.githubusercontent.com/76227605/174879834-726a4268-9a52-47db-bf57-191fd21321f9.png">
-                </div>
-                <div class="gallery-img">
-                    <img loading="lazy" alt="valley with pink forest" src="https://user-images.githubusercontent.com/76227605/174879843-8a142943-5711-4e4e-a3cc-da916ecd021d.png">
-                </div>
-                <div class="gallery-img">
-                    <img loading="lazy" alt="simon's cave" src="https://user-images.githubusercontent.com/76227605/174879853-1221c096-e297-46b8-a43e-a2adec7ab1fe.png">
-                </div>
-                <div class="gallery-img">
-                    <img loading="lazy" alt="jopingguin mushroom mineshaft" src="https://user-images.githubusercontent.com/76227605/174879853-1221c096-e297-46b8-a43e-a2adec7ab1fe.png">
-                </div>
-                <div class="gallery-img">
-                    <img loading="lazy" alt="jopingguin titanic" src="https://user-images.githubusercontent.com/76227605/174879853-1221c096-e297-46b8-a43e-a2adec7ab1fe.png">
-                </div>
-                <div class="gallery-img">
-                    <img loading="lazy" alt="jopingguin underwater portal" src="https://user-images.githubusercontent.com/76227605/174879853-1221c096-e297-46b8-a43e-a2adec7ab1fe.png">
+                    <img loading="lazy" alt="ender dragon island" src="https://user-images.githubusercontent.com/76227605/185685384-aa7e6778-57cd-4cea-9081-cbbac078ef61.png">
                 </div>
             </section>
 
@@ -150,7 +162,7 @@
                     <img id="pixelated" loading="lazy" class="view-limit" alt="create sea logo" src="https://user-images.githubusercontent.com/76227605/174876888-5072813f-ccd2-4d07-b7e1-739f47233d33.jpg">
                     <span>Create Sea Logo</span>
                 </div>
-            </section>
+            </section> -->
         </article>
 
         <div class="attribution">
